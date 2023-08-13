@@ -9,15 +9,21 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
+.body {
   font-family: "Open Sans", sans-serif;
   background-color: #040404;
   color: #fff;
   position: relative;
   background: transparent;
 }
-
-body::before {
+.head{
+  font-family: "Open Sans", sans-serif;
+  background-color: #040404;
+  color: #fff;
+  position: relative;
+  background: transparent;
+}
+.head::before{
   content: "";
   position: fixed;
   background: black url("../img/back\ graund.jpeg") top right no-repeat;
@@ -28,7 +34,30 @@ body::before {
   height: 100vh;
   z-index: -1;
 }
-body::after {
+.head::after{
+  content: "";
+  position: fixed;
+  background-color: rgba(0, 0, 0, 50%);
+  background-size: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 0;
+}
+.body::before {
+  content: "";
+  position: fixed;
+  background: black url("../img/back\ graund.jpeg") top right no-repeat;
+  background-size: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+  filter: blur(5px);
+}
+.body::after {
   content: "";
   position: fixed;
   background-color: rgba(0, 0, 0, 50%);

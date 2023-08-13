@@ -53,6 +53,8 @@
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })
+let home = document.querySelector(".home")
+let divBody = document.querySelector("#body")
 
   /**
    * Scrool with ofset on links with a class name .scrollto
@@ -70,7 +72,7 @@
       navlinks.forEach((item) => {
         item.classList.remove('active')
       })
-
+divBody.setAttribute("class", "body");
       this.classList.add('active')
 
       if (navbar.classList.contains('navbar-mobile')) {
@@ -107,7 +109,9 @@
       scrollto(this.hash)
     }
   }, true)
-
+home.addEventListener("click",()=>{
+  divBody.setAttribute("class", "head");
+})
   /**
    * Activate/show sections on load with hash links
    */
